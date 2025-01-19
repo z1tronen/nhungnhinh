@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zịt Yêu Thỏ</title>
+  <link rel="icon" type="image/x-icon" href="heart.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <video class="background-video" autoplay muted>
+    <source src="final_02.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="wrapper">
+    <div class="envelope">
+      <div class="letter">
+        <div class="text">
+          <strong>Gửi bé Thỏ của Zịt.</strong>
+          <p>
+            Ngày này năm trước, chúng ta đã bắt đầu câu chuyện tình yêu cùng nhau và đó thực sự là một hành trình tuyệt vời. Hy vọng anh và em sẽ cùng nhau nắm tay bước tiếp con đường này. Chúc mừng chặng đường 1 năm, người đặc biệt của anh!
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="heart"></div>
+
+    <div class="float-text">
+      <span>I</span>
+      <div class="big-heart"></div>
+      <span>YOU</span>
+    </div>
+  </div>
+
+  <script>
+    const wrapper = document.querySelector(".wrapper");
+    const video = document.querySelector(".background-video");
+    const body = document.querySelector("body");
+
+    setTimeout(() => {
+      video.remove();
+      body.style.background = "url('bg.jpg') no-repeat center center fixed";
+      body.style.backgroundSize = "cover";
+      wrapper.style.display = "block";
+    }, 10000);
+
+    wrapper.addEventListener("click", () => {
+      wrapper.classList.toggle("open");
+    });
+  </script>
+</body>
+</html>
